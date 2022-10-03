@@ -1,0 +1,87 @@
+//====================================================================================================
+.footer {
+	margin-bottom: 80px;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__row
+
+	&__row {
+		display: flex;
+		margin-inline: -56px;
+		justify-content: space-between;
+	}
+
+	// .footer__column
+
+	&__column {
+		display: flex;
+		padding-inline: 56px;
+		flex: 1 1 30.33%;
+	}
+	.footer__column:not(:first-child) {
+		border-left: 1px solid #d7d9df;
+	}
+
+	// .footer__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .footer__head
+
+	&__head {
+		margin-bottom: 20px;
+	}
+
+	// .footer__body
+
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		align-content: start;
+		flex-wrap: wrap;
+		row-gap: 10px;
+		column-gap: 10px;
+		a {
+			flex: 1 1 30.33%;
+			white-space: nowrap;
+			transition: color 0.5s ease;
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+}
+
+.footer__column_contacts {
+	.footer__body {
+		row-gap: 0;
+	}
+
+	a:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	a {
+		display: flex;
+		align-items: center;
+		color: $accentColor;
+	}
+	span {
+		display: inline-block;
+		width: 22px;
+		text-align: center;
+		margin-right: 10px;
+		font-size: 20px;
+		color: $greyColor;
+	}
+	.ic-phone {
+		font-size: 23px;
+	}
+}
+
+//====================================================================================================

@@ -1,0 +1,416 @@
+//====================================================================================================
+//====================первый экран======================
+.page {
+	// .page__first
+
+	&__first {
+		position: relative;
+		@include adaptiveValue("margin-bottom", 200, 100);
+	}
+
+	// .page__places
+
+	&__places {
+		@include adaptiveValue("margin-bottom", 234, 100);
+	}
+
+	// .page__price
+
+	&__price {
+		@include adaptiveValue("margin-bottom", 234, 100);
+	}
+
+	// .page__form
+
+	&__form {
+		@include adaptiveValue("margin-bottom", 234, 100);
+	}
+}
+
+.first {
+	// .first__bg
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		img {
+			object-position: center;
+		}
+	}
+
+	// .first__container
+
+	&__container {
+		display: flex;
+		justify-content: end;
+	}
+
+	// .first__content
+
+	&__content {
+		@include adaptiveValue("margin-top", 185, 100);
+		@include adaptiveValue("margin-bottom", 296, 116);
+		@include adaptiveValue("margin-right", 60, 10);
+		max-width: rem(412);
+		* {
+			color: white;
+		}
+	}
+
+	// .first__title
+
+	&__title {
+		margin-bottom: rem(35);
+	}
+
+	// .first__text
+
+	&__text {
+		margin-bottom: rem(35);
+	}
+
+	// .first__btn
+
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(30) rem(40) rem(28);
+		background-color: $accentColor;
+		line-height: 1;
+		width: 80%;
+		min-width: rem(230);
+	}
+}
+
+//====================Места пребывания======================
+
+.head {
+	max-width: 350px;
+
+	// .head__title
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	//head__line
+
+	&__line {
+		height: 4px;
+		width: 62%;
+		background-color: $accentColor;
+		margin-bottom: 30px;
+	}
+
+	// .head__text
+
+	&__text {
+	}
+}
+
+.places {
+	// .places__container
+
+	&__container {
+	}
+
+	// .places__head
+
+	&__head {
+		margin-bottom: 55px;
+	}
+
+	// .places__body
+
+	&__body {
+	}
+
+	// .places__raw
+
+	&__raw {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 100px;
+		column-gap: 60px;
+	}
+
+	// .places__column
+
+	&__column {
+		flex: 0 1 350px;
+	}
+
+	// .places__item
+
+	&__item {
+		position: relative;
+		transition: all 0.5s ease;
+		will-change: transform;
+		&:hover {
+			transform: scale(1.03, 1.03) translate3d(0, -10px, 0);
+			box-shadow: 0px 0px 33px rgba(30, 23, 56, 0.241);
+		}
+
+		&:after {
+			content: attr(data-title);
+			position: absolute;
+			z-index: 2;
+			width: auto;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			font-size: rem(25);
+			color: $mainColor;
+			padding: 17px 60px;
+			background-color: white;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+//====================Прайсы======================
+
+.price {
+	// .price__container
+
+	&__container {
+	}
+
+	// .price__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin-inline: -15px;
+		@media (max-width: 991.98px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 30px;
+			.price__column {
+				flex: 0 1 370px;
+			}
+		}
+	}
+
+	// .price__column
+
+	&__column {
+		display: flex;
+		flex: 0 1 370px;
+		border: 1px solid $greyColor;
+		border-radius: 6px;
+		padding: 40px 30px 30px;
+		transition: all 0.5s ease;
+		margin-inline: 15px;
+
+		&:hover {
+			border: 1px solid $accentColor;
+			box-shadow: 0px 0px 0px 2px $accentColor;
+			.priceItem__title {
+				color: $accentColor;
+			}
+			.priceItem__body span {
+				color: $mainColor;
+			}
+		}
+	}
+
+	// .price__item
+
+	&__item {
+	}
+}
+.priceItem {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+
+	// .priceItem__head
+
+	&__head {
+		padding-bottom: 28px;
+		border-bottom: 1px solid $accentColor;
+		margin-bottom: 30px;
+	}
+
+	// .priceItem__title
+
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include adaptiveValue("margin-bottom", 40, 10, 1170, 991, 1);
+		transition: all 0.5s ease;
+		p:first-child {
+			margin-right: 10px;
+		}
+	}
+
+	// .priceItem__subtitle
+
+	&__subtitle {
+	}
+
+	// .priceItem__body
+
+	&__body {
+		flex: 1 0 auto;
+		li:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 8, 1170, 991, 1);
+		}
+		@include adaptiveValue("margin-bottom", 54, 25, 1170, 991, 1);
+		span {
+			margin-right: 8px;
+			color: $accentColor;
+			transition: all 0.5s ease;
+		}
+	}
+
+	// .priceItem__btn
+
+	&__btn {
+		align-self: center;
+		text-align: center;
+		width: 100%;
+		color: white;
+		background-color: $accentColor;
+		a {
+			display: block;
+			padding: 30px 0;
+		}
+	}
+}
+
+.price__column_mod {
+	padding: 90px 0px 80px 60px;
+
+	@media (max-width: 640px) {
+		padding: 70px 0px 60px 45px;
+	}
+
+	.priceItem__head {
+		padding-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 53px;
+	}
+
+	.priceItem__contacts {
+		text-align: right;
+		align-self: end;
+		margin-right: 50px;
+		a {
+			display: flex;
+			align-items: center;
+		}
+		.ic-phone {
+			font-size: 19px;
+			color: $accentColor;
+			margin-right: 10px;
+		}
+	}
+}
+
+//====================форма отправки======================
+
+.form {
+	position: relative;
+	padding-block: 70px;
+	@media (max-width: 640px) {
+		padding-block: 100px;
+	}
+
+	// .form__content
+
+	&__container {
+		display: flex;
+		justify-content: end;
+		@media (max-width: 768px) {
+			justify-content: center;
+		}
+	}
+
+	// form__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 660px;
+		padding: 50px;
+		background-color: white;
+		box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+		border-radius: 5px;
+	}
+
+	// .form__head
+
+	&__head {
+		margin-bottom: 24px;
+		text-align: center;
+	}
+
+	// .form__title
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	// .form__body
+
+	&__body {
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		row-gap: 25px;
+		input {
+			display: inline-block !important;
+			padding: 15px;
+			width: 270px;
+			border: 1px solid $greyColor;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		button {
+			display: block;
+			// margin-top: 25px;
+			padding: 18px 40px;
+			margin-inline: auto;
+			color: white;
+			background-color: $accentColor;
+		}
+	}
+
+	// .form__bg
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: -33%;
+		top: 0;
+		z-index: -1;
+		@media (max-width: 768px) {
+			left: 0;
+		}
+		img {
+			object-position: center;
+		}
+	}
+}
+
+//====================================================================================================
