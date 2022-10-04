@@ -1,6 +1,15 @@
 //====================================================================================================
-//====================первый экран======================
 .page {
+	// .page__decor
+
+	&__decor {
+		// .page__decor_map
+
+		&_map {
+			background: url("@img/tours/map.svg") 50% 120px/110% auto no-repeat;
+		}
+	}
+
 	// .page__first
 
 	&__first {
@@ -25,7 +34,15 @@
 	&__form {
 		@include adaptiveValue("margin-bottom", 234, 100);
 	}
+
+	// .page__tours
+
+	&__tours {
+		@include adaptiveValue("margin-bottom", 234, 100);
+	}
 }
+
+//====================первый экран======================
 
 .first {
 	// .first__bg
@@ -106,28 +123,13 @@
 		background-color: $accentColor;
 		margin-bottom: 30px;
 	}
-
-	// .head__text
-
-	&__text {
-	}
 }
 
 .places {
-	// .places__container
-
-	&__container {
-	}
-
 	// .places__head
 
 	&__head {
 		margin-bottom: 55px;
-	}
-
-	// .places__body
-
-	&__body {
 	}
 
 	// .places__raw
@@ -178,14 +180,148 @@
 	}
 }
 
+//====================Туры======================
+
+.tours {
+	// .tours__discription
+
+	&__discription {
+	}
+}
+
+.discription {
+	// .discription__row
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 991px) {
+			display: block;
+		}
+	}
+
+	// .discription__column
+
+	&__column {
+		padding-block: 15px;
+		@include adaptiveValue("padding-right", 100, 20, 1170, 991, 2);
+		flex: 0 1 470px;
+	}
+
+	// .discription__head
+
+	&__head {
+		max-width: none;
+		margin-bottom: rem(50);
+	}
+
+	// .discription__btn
+
+	&__btn {
+		a {
+			display: inline-block;
+			padding: 18px 40px;
+			text-align: center;
+			color: white;
+			background-color: $accentColor;
+			@media (max-width: 480px) {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	// .discription__image
+
+	&__image {
+		// display: flex;
+		// flex-direction: column;
+		align-self: stretch;
+		flex: 0 1 430px;
+		@media (max-width: 991px) {
+			height: 400px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .discription__comment
+
+	&__comment {
+		// margin-left: -110px;
+		@include adaptiveValue("margin-left", -110, -210, 1170, 991, 2);
+		@media (max-width: 991px) {
+			position: relative;
+			z-index: 2;
+			margin-inline: auto;
+			margin-top: -60px;
+		}
+	}
+}
+
+.comment {
+	max-width: rem(382);
+	padding: rem(30);
+	background-color: rgb(244, 244, 244);
+	border-radius: 6px;
+
+	// .comment__title
+
+	&__title {
+		margin-bottom: rem(10);
+	}
+
+	// .comment__line
+
+	&__line {
+		width: 67px;
+		height: 0.7px;
+		background-color: $accentColor;
+		margin-bottom: rem(20);
+	}
+
+	// .comment__text
+
+	&__text {
+		margin-bottom: rem(30);
+	}
+
+	// .comment__author
+
+	&__author {
+		display: flex;
+		align-items: center;
+	}
+
+	// .comment__avatar
+
+	&__avatar {
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: rem(15);
+		img {
+			width: 100%;
+		}
+	}
+
+	// .comment__username
+
+	&__username {
+		font-weight: 500;
+		color: black;
+	}
+}
+
 //====================Прайсы======================
 
 .price {
-	// .price__container
-
-	&__container {
-	}
-
 	// .price__row
 
 	&__row {
@@ -224,12 +360,8 @@
 			}
 		}
 	}
-
-	// .price__item
-
-	&__item {
-	}
 }
+
 .priceItem {
 	display: flex;
 	flex-direction: column;
@@ -254,11 +386,6 @@
 		p:first-child {
 			margin-right: 10px;
 		}
-	}
-
-	// .priceItem__subtitle
-
-	&__subtitle {
 	}
 
 	// .priceItem__body
@@ -387,7 +514,6 @@
 
 		button {
 			display: block;
-			// margin-top: 25px;
 			padding: 18px 40px;
 			margin-inline: auto;
 			color: white;

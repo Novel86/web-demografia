@@ -3,15 +3,14 @@
 	margin-bottom: 80px;
 	// .footer__container
 
-	&__container {
-	}
-
 	// .footer__row
 
 	&__row {
 		display: flex;
 		margin-inline: -56px;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: 40px;
 	}
 
 	// .footer__column

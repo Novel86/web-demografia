@@ -46,7 +46,7 @@ flsFunctions.isWebp();
 Документация: https://template.fls.guru/template-docs/modul-taby.html
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -144,7 +144,7 @@ flsForms.formFieldsInit({
 Изменение дизайна скроллбара
 Документация по работе в шаблоне: В HTML добавляем к блоку атрибут data-simplebar
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
-Сниппет(HTML): 
+Сниппет(HTML):
 */
 // import './files/scroll/simplebar.js';
 
@@ -164,7 +164,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
@@ -183,7 +183,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Галерея ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /*
-Документация по работе в шаблоне: 
+Документация по работе в шаблоне:
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
