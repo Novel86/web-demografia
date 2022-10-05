@@ -45,14 +45,16 @@
 //====================первый экран======================
 
 .first {
+	overflow: hidden;
 	// .first__bg
 
 	&__bg {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
+		width: 110%;
+		height: 110%;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
 		z-index: -1;
 		img {
 			object-position: center;
@@ -73,6 +75,7 @@
 		@include adaptiveValue("margin-bottom", 296, 116);
 		@include adaptiveValue("margin-right", 60, 10);
 		max-width: rem(412);
+		will-change: transform;
 		* {
 			color: white;
 		}
@@ -146,6 +149,7 @@
 
 	&__column {
 		flex: 0 1 350px;
+		will-change: transform;
 	}
 
 	// .places__item
@@ -156,7 +160,7 @@
 		will-change: transform;
 		&:hover {
 			transform: scale(1.03, 1.03) translate3d(0, -10px, 0);
-			box-shadow: 0px 0px 33px rgba(30, 23, 56, 0.241);
+			box-shadow: 0px 0px 20px rgba(30, 23, 56, 0.15);
 		}
 
 		&:after {
@@ -166,7 +170,7 @@
 			width: auto;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: 0;
+			bottom: -1px;
 			font-size: rem(25);
 			color: $mainColor;
 			padding: 17px 60px;
@@ -235,10 +239,9 @@
 	// .discription__image
 
 	&__image {
-		// display: flex;
-		// flex-direction: column;
 		align-self: stretch;
 		flex: 0 1 430px;
+		will-change: transform;
 		@media (max-width: 991px) {
 			height: 400px;
 		}
@@ -269,6 +272,7 @@
 	padding: rem(30);
 	background-color: rgb(244, 244, 244);
 	border-radius: 6px;
+	will-change: transform;
 
 	// .comment__title
 
