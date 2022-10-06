@@ -4,8 +4,7 @@
 
 @font-face {
   font-family: "icons";
-  src: url("fonts/icons.eot?hxu5wl");
-  src: url("fonts/icons.eot?hxu5wl#iefix") format("embedded-opentype"), url("fonts/icons.ttf?hxu5wl") format("truetype"), url("fonts/icons.woff?hxu5wl") format("woff"), url("fonts/icons.svg?hxu5wl#icons") format("svg");
+  src: url("../fonts/icons.ttf?hxu5wl") format("truetype"), url("../fonts/icons.woff?hxu5wl") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
