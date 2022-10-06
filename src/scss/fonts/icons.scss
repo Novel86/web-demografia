@@ -2,10 +2,8 @@
 
 @font-face {
 	font-family: "#{$icomoon-font-family}";
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hxu5wl");
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hxu5wl#iefix") format("embedded-opentype"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?hxu5wl") format("truetype"), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?hxu5wl") format("woff"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?hxu5wl##{$icomoon-font-family}") format("svg");
+	// src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hxu5wl");
+	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?hxu5wl") format("truetype"), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?hxu5wl") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
